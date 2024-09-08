@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Celesca Studio!</Text>
-      <StatusBar style="auto" />
+    <View
+      style={{
+        flex:1,
+        justifyContent: "center",
+        alignItems: "center",
+        
+      }}
+    >
+      <Text style={{fontSize:20}}>Hello, this is Celesca.</Text>
+      <Text>Let's learn React Native together.</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
