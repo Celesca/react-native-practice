@@ -1,7 +1,10 @@
 import { View, Text, Button, Image, ScrollView, Alert } from "react-native";
 import { myStyle } from "./styles/myStyle";
+import { useState } from "react";
 
 export default function App() {
+  const [developer, setDeveloper] = useState({name : "Celesca", year: 2567})
+
   return (
     <View style={myStyle.container}>
       <ScrollView>
@@ -17,11 +20,14 @@ export default function App() {
         ></Image>
         <Text style={myStyle.header}>Hello, this is Celesca.</Text>
         <Text style={myStyle.content}>Let's learn React Native together.</Text>
+        <Text style={myStyle.content}>Developer: {developer.name} | {developer.year} </Text>
         <Button
-          title="ดูข้อมูลเพิ่มเติม"
+          title="อัพเดทข้อมูล"
           color="red"
-          onPress={() =>
+          onPress={() => {
+            setDeveloper({ name : "Celescadevvv", year: 2568})
             Alert.alert("แจ้งเตือน", "แอพนี้ถูกพัฒนาด้วย React Native")
+            }
           }
         ></Button>
       </ScrollView>
